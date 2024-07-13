@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Banking App</title>
+		<!-- font-awesome link  -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- css file  -->
+		<link rel="stylesheet" href="styles.css" />
+
+		<!-- font link poppins  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- sidebar start  -->
+		<section class="sidebar">
+			<div class="sidebar-content">
+				<button class="sidebar-close">
+					<i class="fas fa-times"></i>
+				</button>
+				<br />
+				<a href="Index.html" class="active">
+					<img src="ICONS/dashboard.svg" alt="" class="default-image" />
+					<img src="ICONS/dashboardblack.svg" alt="" class="hover-image" />
+					<span>Dashboard</span>
+				</a>
+				<a href="fundwallet.html">
+					<img src="ICONS/wallet.svg" alt="" class="default-image" />
+					<img src="ICONS/walletblack.svg" alt="" class="hover-image" />
+					<span>Fund Wallet</span>
+				</a>
+				<a href="#">
+					<img src="ICONS/pin.svg" alt="" class="default-image" />
+					<img src="ICONS/pinblack.svg" alt="" class="hover-image" />
+					<span>Generate Pin</span>
+				</a>
+				<a href="#">
+					<img src="ICONS/reseller.svg" alt="" class="default-image" />
+					<img src="ICONS/resellerblack.svg" alt="" class="hover-image" />
+					<span>Become a reseller</span>
+				</a>
+				<a href="#">
+					<img src="ICONS/transactions.svg" alt="" class="default-image" />
+					<img src="ICONS/transactionsblack.svg" alt="" class="hover-image" />
+					<span>Transaction History</span> </a
+				><a href="#">
+					<img src="ICONS/notice.svg" alt="" class="default-image" />
+					<img src="ICONS/noticeblack.svg" alt="" class="hover-image" />
+					<span>Own a VTU Site</span>
+				</a>
+				<a href="#">
+					<img src="ICONS/contact.svg" alt="" class="default-image" />
+					<img src="ICONS/contactblack.svg" alt="" class="hover-image" />
+					<span>Contact us</span>
+				</a>
+			</div>
+		</section>
+		<!-- sidebar ends  -->
+
+		<!-- main starts -->
+		<div class="content-area">
+						 			<div class="head">
+				<div class="logo">
+					<i class="fa-solid fa-bars" id="menu"></i>
+					Logo
+					<script>
+						const menuBtn = document.getElementById("menu");
+						menuBtn.addEventListener("click", () => {
+							const sidebar = document.querySelector(".sidebar");
+							sidebar.style.display =
+								sidebar.style.display === "none" ? "block" : "none";
+						});
+					</script>
+				</div>
+				<div class="other-content">
+					<i class="fas fa-moon"></i>
+					<img src="ICONS/notice.svg" alt=""  />
+					<div class="dropdown">
+						<div class="dropdown-trigger">
+							<i class="fas fa-user"></i>
+							<!-- <img src="ICONS/profile.svg" alt="" width="100%"/> -->
+						</div>
+						<div class="dropdown-content">
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-user"></i>
+								<span>Profile</span>
+							</a>
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-cog"></i>
+								<span>Settings</span>
+							</a>
+							<a href="#" class="dropdown-item">
+								<i class="fas fa-sign-out-alt"></i>
+								<span>Logout</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dashboard">
+				<!-- header start  -->
+	
+
+
+			<header>
+				<div class="left-section">
+					<img src="ICONS/profile.svg" alt="" />
+					<div class="profile-details">
+						<h5>Hello,</h5>
+						<h4>0906 413 1880</h4>
+						<div class="who">Customer</div>
+					</div>
+				</div>
+				<div class="right-section">
+					<!-- <i class="fas fa-moon"></i>
+					<img src="ICONS/noticeblack.svg" alt="" class="light-mode-image" />
+					<img
+						src="ICONS/notice.svg"
+						alt=""
+						class="dark-mode-image"
+						style="display: none"
+					/> -->
+				</div>
+			</header>
+			<!-- header ends  -->
+
+			<section class="account">
+				<div class="slideshow-container">
+					<div class="account-slideshow">
+						<div class="slide">
+							<div class="account-details">
+								<div>Bank Name: Wema bank</div>
+								<div>Account No: xxxxxxxx</div>
+							</div>
+							<button><i class="fa-regular fa-copy"></i> copy</button>
+						</div>
+						<div class="slide">
+							<div class="account-details">
+								<div>Bank Name: Access bank</div>
+								<div>Account No: xxxxxxxx</div>
+							</div>
+							<button><i class="fa-regular fa-copy"></i> copy</button>
+						</div>
+					</div>
+				</div>
+				<div class="dots account-dots">
+					<span class="dot" onclick="currentSlide(0)"></span>
+					<span class="dot" onclick="currentSlide(1)"></span>
+				</div>
+			</section>
+
+			<section class="wallet">
+				<div class="slideshow-container">
+					<div class="wallet-slideshow">
+						<div class="slide">
+							<div class="wallet-balance">
+								<p class="balance-title">
+									<img src="ICONS/wallet.svg" alt="" /><span
+										>Wallet Balance</span
+									>
+								</p>
+								<p class="balance-amount">₦2000.00</p>
+								<button>
+									<img src="ICONS/transactionsblack.svg" alt="" /><span
+										>Wallet history</span
+									>
+								</button>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="wallet-balance">
+								<p class="balance-title">
+									<img src="ICONS/refer.svg" alt="" /><span
+										>Total Referral Bonus</span
+									>
+								</p>
+								<p class="balance-amount">₦1000.00</p>
+								<button>
+									<i class="fas fa-money-bill-transfer"></i
+									><span>Withdraw bonus</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dots wallet-dots">
+					<span class="dot" onclick="currentSlide2(0)"></span>
+					<span class="dot" onclick="currentSlide2(1)"></span>
+				</div>
+			</section>
+
+			<section class="features">
+				<a href="#" class="feature">
+					<img src="ICONS/offersblack.svg" alt="" class="light-mode-image" />
+					<img src="ICONS/offers.svg" alt="" class="dark-mode-image" />
+					<span>Offers</span>
+				</a>
+				<a href="#" class="feature">
+					<img src="ICONS/upgradeblack.svg" alt="" class="light-mode-image" />
+					<img src="ICONS/upgrade.svg" alt="" class="dark-mode-image" />
+					<span>Upgrade</span>
+				</a>
+				<a href="#" class="feature">
+					<img src="ICONS/faqsblack.svg" alt="" class="light-mode-image" />
+					<img src="ICONS/faqs.svg" alt="" class="dark-mode-image" />
+					<span>Check FAQs</span>
+				</a>
+				<a href="#" class="feature">
+					<img src="ICONS/referblack.svg" alt="" class="light-mode-image" />
+					<img src="ICONS/refer.svg" alt="" class="dark-mode-image" />
+					<span>Refer & earn</span>
+				</a>
+			</section>
+
+			<section class="marketplace">
+				<div class="title">Marketplace</div>
+				<div class="box">
+					<a href="#" class="feature">
+						<img src="ICONS/data.svg" alt="" />
+						<span>Databundle</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/airtime.svg" alt="" />
+						<span>Airtime</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/electricity.svg" alt="" />
+						<span>Electricity</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/referblack.svg" alt="" />
+						<span>Refer & earn</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/education.svg" alt="" />
+						<span>Education</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/print.svg" alt="" />
+						<span>Printing R-Cards</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/cac.svg" alt="" />
+						<span>CAC Registration</span>
+					</a>
+					<a href="#" class="feature">
+						<img src="ICONS/others.svg" alt="" />
+						<span>Other Services</span>
+					</a>
+				</div>
+			</section>
+
+			<footer>
+				<a href="#" class="footer-item"
+					><i class="fas fa-ellipsis-h"></i><br /><span>More</span></a
+				>
+				<a href="#" class="footer-item"
+					><i class="fas fa-exchange-alt"></i><br /><span>Transactions</span></a
+				>
+				<a href="Index.html" class="footer-item active"
+					><i class="fas fa-home"></i><br /><span>Home</span></a
+				>
+				<a href="#" class="footer-item"
+					><i class="fas fa-user"></i><br /><span>My Profile</span></a
+				>
+				<a href="#" class="footer-item"
+					><i class="fas fa-phone-alt"></i><br /><span>Contact Us</span></a
+				>
+			</footer>
+			</div>
+		</div>
+
+		<script>
+			// for sidebar display on mobile screen and theme changer
+			const moreButton = document.querySelector(".footer-item:first-child");
+			const sidebar = document.querySelector(".sidebar");
+			const sidebarCloseButton = document.querySelector(".sidebar-close");
+
+			moreButton.addEventListener("click", () => {
+				sidebar.classList.toggle("show");
+			});
+
+			sidebarCloseButton.addEventListener("click", () => {
+				sidebar.classList.remove("show");
+			});
+
+			const darkModeToggle = document.querySelector(".fa-moon");
+			let isDarkMode = false;
+
+			darkModeToggle.addEventListener("click", () => {
+				document.body.classList.toggle("dark-mode");
+				document.body.classList.toggle("light-mode");
+				darkModeToggle.classList.toggle("fa-sun");
+				isDarkMode = !isDarkMode;
+				toggleImageSources();
+			});
+
+			function toggleImageSources() {
+				const darkModeImages = document.querySelectorAll(
+					".features .feature .dark-mode-image, .right-section .dark-mode-image, .head .other-content .dark-mode-image "
+				);
+				const lightModeImages = document.querySelectorAll(
+					".features .feature .light-mode-image, .right-section .light-mode-image, .head .other-content .light-mode-image"
+				);
+
+				if (isDarkMode) {
+					darkModeImages.forEach((img) => (img.style.display = "inline-block"));
+					lightModeImages.forEach((img) => (img.style.display = "none"));
+				} else {
+					darkModeImages.forEach((img) => (img.style.display = "none"));
+					lightModeImages.forEach(
+						(img) => (img.style.display = "inline-block")
+					);
+				}
+			}
+
+			// Account Slideshow
+			let activeIndex = 0;
+			const slides = document.querySelectorAll(".account-slideshow .slide");
+			const totalSlides = slides.length;
+			const slideshow = document.querySelector(".account-slideshow");
+			const dots = document.querySelectorAll(".account-dots .dot");
+
+			function showSlide(index) {
+				const slideWidth =
+					slides[0].clientWidth +
+					parseFloat(getComputedStyle(slides[0]).marginRight);
+				slideshow.style.transform = `translateX(-${index * slideWidth}px)`;
+				updateDots(index);
+			}
+
+			function updateDots(index) {
+				dots.forEach((dot, i) => {
+					dot.classList.toggle("active", i === index);
+				});
+			}
+
+			function nextSlide() {
+				activeIndex = (activeIndex + 1) % totalSlides;
+				showSlide(activeIndex);
+			}
+
+			function previousSlide() {
+				activeIndex = (activeIndex - 1 + totalSlides) % totalSlides;
+				showSlide(activeIndex);
+			}
+
+			function currentSlide(index) {
+				activeIndex = index;
+				showSlide(index);
+				resetInterval();
+			}
+
+			let slideInterval = setInterval(nextSlide, 5000);
+
+			function resetInterval() {
+				clearInterval(slideInterval);
+				slideInterval = setInterval(nextSlide, 5000);
+			}
+
+			slideshow.addEventListener("mousedown", startDrag);
+			slideshow.addEventListener("touchstart", startDrag);
+
+			let startX;
+
+			function startDrag(e) {
+				clearInterval(slideInterval);
+				startX = e.pageX || e.touches[0].pageX;
+				slideshow.addEventListener("mousemove", drag);
+				slideshow.addEventListener("touchmove", drag);
+				slideshow.addEventListener("mouseup", endDrag);
+				slideshow.addEventListener("touchend", endDrag);
+			}
+
+			function drag(e) {
+				const x = e.pageX || e.touches[0].pageX;
+				const walk = (x - startX) * 3;
+				slideshow.style.transform = `translateX(-${
+					activeIndex *
+						(slides[0].clientWidth +
+							parseFloat(getComputedStyle(slides[0]).marginRight)) -
+					walk
+				}px)`;
+			}
+
+			function endDrag(e) {
+				const x = e.pageX || e.changedTouches[0].pageX;
+				const walk = x - startX;
+				if (walk > 50) {
+					previousSlide();
+				} else if (walk < -50) {
+					nextSlide();
+				} else {
+					showSlide(activeIndex);
+				}
+				slideInterval = setInterval(nextSlide, 5000);
+				slideshow.removeEventListener("mousemove", drag);
+				slideshow.removeEventListener("touchmove", drag);
+				slideshow.removeEventListener("mouseup", endDrag);
+				slideshow.removeEventListener("touchend", endDrag);
+			}
+
+			// Initialize the first slide
+			showSlide(activeIndex);
+
+			// Wallet Balance and Total Referral Bonus Slideshow
+			let activeIndex2 = 0;
+			const slides2 = document.querySelectorAll(".wallet-slideshow .slide");
+			const totalSlides2 = slides2.length;
+			const slideshow2 = document.querySelector(".wallet-slideshow");
+			const dots2 = document.querySelectorAll(".wallet-dots .dot");
+
+			function showSlide2(index) {
+				const slideWidth =
+					slides2[0].clientWidth +
+					parseFloat(getComputedStyle(slides2[0]).marginRight);
+				slideshow2.style.transform = `translateX(-${index * slideWidth}px)`;
+				updateDots2(index);
+			}
+
+			function updateDots2(index) {
+				dots2.forEach((dot, i) => {
+					dot.classList.toggle("active", i === index);
+				});
+			}
+
+			function nextSlide2() {
+				activeIndex2 = (activeIndex2 + 1) % totalSlides2;
+				showSlide2(activeIndex2);
+			}
+
+			function previousSlide2() {
+				activeIndex2 = (activeIndex2 - 1 + totalSlides2) % totalSlides2;
+				showSlide2(activeIndex2);
+			}
+
+			function currentSlide2(index) {
+				activeIndex2 = index;
+				showSlide2(index);
+				resetInterval2();
+			}
+
+			let slideInterval2 = setInterval(nextSlide2, 9000);
+
+			function resetInterval2() {
+				clearInterval(slideInterval2);
+				slideInterval2 = setInterval(nextSlide2, 5000);
+			}
+
+			slideshow2.addEventListener("mousedown", startDrag2);
+			slideshow2.addEventListener("touchstart", startDrag2);
+
+			let startX2;
+
+			function startDrag2(e) {
+				clearInterval(slideInterval2);
+				startX2 = e.pageX || e.touches[0].pageX;
+				slideshow2.addEventListener("mousemove", drag2);
+				slideshow2.addEventListener("touchmove", drag2);
+				slideshow2.addEventListener("mouseup", endDrag2);
+				slideshow2.addEventListener("touchend", endDrag2);
+			}
+
+			function drag2(e) {
+				const x = e.pageX || e.touches[0].pageX;
+				const walk = (x - startX2) * 3;
+				slideshow2.style.transform = `translateX(-${
+					activeIndex2 *
+						(slides2[0].clientWidth +
+							parseFloat(getComputedStyle(slides2[0]).marginRight)) -
+					walk
+				}px)`;
+			}
+
+			function endDrag2(e) {
+				const x = e.pageX || e.changedTouches[0].pageX;
+				const walk = x - startX2;
+				if (walk > 50) {
+					previousSlide2();
+				} else if (walk < -50) {
+					nextSlide2();
+				} else {
+					showSlide2(activeIndex2);
+				}
+				slideInterval2 = setInterval(nextSlide2, 5000);
+				slideshow2.removeEventListener("mousemove", drag2);
+				slideshow2.removeEventListener("touchmove", drag2);
+				slideshow2.removeEventListener("mouseup", endDrag2);
+				slideshow2.removeEventListener("touchend", endDrag2);
+			}
+
+			// Initialize the first slide for the Wallet Balance and Total Referral Bonus Slideshow
+			showSlide2(activeIndex2);
+
+			// to disable slide show in desktop view
+			if (window.innerWidth >= 768) {
+				clearInterval(slideInterval);
+				clearInterval(slideInterval2);
+			}
+
+			window.addEventListener("resize", () => {
+				if (window.innerWidth >= 768) {
+					clearInterval(slideInterval);
+					clearInterval(slideInterval2);
+				} else {
+					slideInterval = setInterval(nextSlide, 5000);
+					slideInterval2 = setInterval(nextSlide2, 5000);
+				}
+			});
+		</script>
+	</body>
+</html>
